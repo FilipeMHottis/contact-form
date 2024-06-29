@@ -8,51 +8,75 @@
 
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/style/main.css">
+  <link rel="stylesheet" href="src/style/form.css">
+  <link rel="stylesheet" href="src/style/mobile.css" media="screen and (max-width: 767px)">
+  <link rel="stylesheet" href="src/style/desktop.css" media="screen and (min-width: 1025px)">
+</head>
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <div class="wrapper">
+    <div class="container">
+      <h1 class="title">Contact Us</h1>
 
-  <h1>Contact Us</h1>
+      <form class="contact-form">
+        <div class="name-fields">
+          <div class="form-group">
+            <label for="fname" class="form-label">First Name</label>
+            <input type="text" id="fname" name="fname" class="form-input" required>
+          </div>
 
-  <form action="">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="fname" required>
+          <div class="form-group">
+            <label for="lname" class="form-label">Last Name</label>
+            <input type="text" id="lname" name="lname" class="form-input" required>
+          </div>
+        </div>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lname" required>
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" id="email" name="email" class="form-input" required>
+        </div>
 
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" required>
+        <div class="form-group">
+          <label for="qtype" class="form-label">Query Type</label>
+          <select name="qtype" id="qtype" class="form-select" required>
+            <option style="display:none" value="" data-default disabled selected>Select an option</option>
+            <option value="general" class="form-option">General Enquiry</option>
+            <option value="support" class="form-option">Support Request</option>
+          </select>
+        </div>
 
-    <label for="qtype">Query Type</label>
-    <select name="qtype" id="qtype" required>
-      <option style="display:none" value="" data-default disabled selected></option>
-      <option value="general">General Enquiry</option>
-      <option value="support">Support Request</option>
-    </select>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea name="message" id="message" class="form-textarea" required></textarea>
+        </div>
 
-    <label for="message">Message</label>
-    <textarea name="message" id="message" required></textarea>
+        <div class="form-group form-checkbox">
+          <input type="checkbox" id="checkbox" class="form-checkbox-input">I consent to being contacted by the team
+        </div>
 
-    <input type="checkbox" id="checkbox">I consent to being contacted by the team
-
-    <button type="submit" id="submit" disabled>Submit</button>
-
-    <!--  -->
-  </form>
-
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/FilipeMHottis/">Filipe Marques Hottis</a>.
+        <div class="form-group">
+          <button type="submit" id="submit" class="form-submit" disabled>Submit</button>
+        </div>
+      </form>
     </div>
-  </footer>
+
+    <footer class="footer">
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/FilipeMHottis/">Filipe Marques Hottis</a>.
+      </div>
+    </footer>
+  </div>
 </body>
 
-<script src="./src/script.js"></script>
-
+<script src="./src/js/script.js"></script>
 </html>
