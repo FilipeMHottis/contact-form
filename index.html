@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -16,37 +16,40 @@
 </head>
 <body>
 
-  Contact Us
+  <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+  <form action="">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="fname" required>
 
-  Last Name
-  This field is required
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lname" required>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+    <label for="qtype">Query Type</label>
+    <select name="qtype" id="qtype">
+      <option value="general">General Enquiry</option>
+      <option value="support">Support Request</option>
+    </select>
 
-  Message
-  This field is required
+    <label for="message">Message</label>
+    <textarea name="message" id="message" required></textarea>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+    <input type="checkbox">I consent to being contacted by the team
 
-  Submit
+    <button type="submit">Submit</button>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <!-- Message Sent!
+    Thanks for completing the form. We'll be in touch soon! -->
+  </form>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/FilipeMHottis/">Filipe Marques Hottis</a>.
+    </div>
+  </footer>
 </body>
 </html>
